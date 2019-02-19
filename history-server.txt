@@ -1,0 +1,100 @@
+    1  yum install httpd-tools
+    2  amazon-linux-extras install nginx1.12
+    3  ulimit -n
+    4  ulimit -n 20000
+    5  echo 50000 > /proc/sys/net/core/somaxconn 
+    6  mysql -v
+    7  mysql -vab -kc 1000 -n 10000 http://localhost:80/
+    8  mysql -vab -kc 1000 -n 10000 http://172.31.12.24:80/
+    9  ab -kc 1000 -n 10000 http://172.31.12.24:80/
+   10  mysql -vab -kc 1000 -n 10000 http://172.31.12.24:80/
+   11  mysql -vab -kc 1000 -n 10000000 http://172.31.12.24:80/
+   12  ab -kc 1000 -n 10000000 http://172.31.12.24:80/
+   13  ab -kc 1000 -n 10000000 http://172.31.12.24:80/
+   14  ab -kc 1000 -n 10000000 http://172.31.12.24:80/index.html
+   15  ab -kc 1000 -n 10000000 http://172.31.12.24:80/index.html
+   16  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   17  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   18  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   19  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   20  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   21  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   22  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   23  ab -kc 1000 -n 1000000 http://172.31.12.24:80/earth-big.jpg
+   24  ab -kc 1000 -n 10000 http://172.31.12.24:80/earth-small.jpg
+   25  ab -kc 1000 -n 1000000 http://172.31.12.24:80/earth-small.jpg
+   26  ab -kc 1000 -n 10000 http://172.31.12.24:80/earth-small.jpg
+   27  ab -kc 1000 -n 10000 http://172.31.12.24:80/earth-small.jpg
+   28  ab -kc 1000 -n 10000 http://172.31.12.24:80/earth-small.jpg
+   29  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   30  ab -kc 1000 -n 1000000 http://172.31.12.24:80/index.html
+   31  git clone https://github.com/akopytov/sysbench.git
+   32  cd
+   33  yum install -y git make automake libtool pkgconfig libaio-devel mariadb-devel openssl-devel
+   34  git clone https://github.com/akopytov/sysbench.git
+   35  cd sysbench/
+   36  ls
+   37  ./autogen.sh 
+   38  ./configure 
+   39  make -j
+   40  make install
+   41  df
+   42  df -h
+   43  ps aux | grep mysql
+   44  /usr/local/bin/sysbench --help | more
+   45  ls
+   46  vi configure
+   47  ./configure --help
+   48  ls
+   49  cd src/
+   50  ls
+   51  cd lua/internal/
+   52  ls
+   53  cd //
+   54  cd /root/sysbenc
+   55  cd /root/sysbench
+   56  ls
+   57  cd src/
+   58  ls
+   59  cd tests/
+   60  ls
+   61  cd ..
+   62  ls
+   63  cd lua
+   64  ls
+   65  vi oltp_read_only.lua
+   66  /usr/local/bin/sysbench oltp_read_only.lua --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=root --mysql-password=armlinux --mysql-db=leodb --oltp-tables-count=10 --oltp-table-size=500000 --report-interval=10 --oltp-dist-type=uniform --rand-init=on --max-requests=0 --oltp-test-mode=nontrx --oltp-nontrx-mode=select --oltp-read-only=on --oltp-skip-trx=on --max-time=120 --num-threads=12 \ prepare
+   67  mysql -u root -p 
+   68  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=root --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+   69  yum install mysql
+   70  yum install mariadb mariadb-server
+   71  vi /etc/my.cnf
+   72  mv /etc/my.cnf /etc/my.cnf.bak
+   73  vi /etc/my.cnf
+   74  systemctl start mariadb
+   75  systemctl status mariadb.service
+   76  systemctl status mariadb.service -l
+   77  ls -l /var/lib/mysql
+   78  ls -l /var/lib/mysql/
+   79  ls -l /var/lib
+   80  vi /etc/my.cnf
+   81  ll /etc/my.cnf
+   82  ll /etc/my.cnf.bak
+   83  ll /etc
+   84  vi /etc/my.cnf.bak
+   85  vi /etc/my.cnf.d/server.cnf 
+   86  mkdir /data
+   87  mkdir /data/mysql
+   88  vi /etc/my.cnf
+   89  systemctl start mariadb
+   90  systemctl status mariadb.service -l
+   91  vi /var/log/mariadb/mariadb.log
+   92  vi /etc/my.cnf
+   93  systemctl start mariadb
+   94  systemctl status mariadb.service -l
+   95  yum install htop
+   96  ps aux | grep mysql
+   97  history
+   98  history -a
+   99  history 
+  100  history > history.txt
