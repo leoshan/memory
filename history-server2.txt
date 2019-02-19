@@ -1,0 +1,336 @@
+    1  ls
+    2  cd wss/
+    3  ls
+    4  ./wss.pl -C 8706 1
+    5  ./wss.pl -C 8706 0.5
+    6  ./wss.pl -C 8706 0.01
+    7  ./wss.pl -C 8706 0.1
+    8  ./wss.pl -C 8707 0.1
+    9  ./wss.pl -C 2442 0.1
+   10  nginx
+   11  nginx -t
+   12  vi /etc/nginx/nginx.conf
+   13  reboot
+   14  cd wss
+   15  ls
+   16  ./wss.pl -C 2442 0.1
+   17  dmesg 
+   18  more /proc/sys/net/ipv4/tcp_syn
+   19  more /proc/sys/net/ipv4/tcp_syncookies 
+   20  echo 0 > /proc/sys/net/ipv4/tcp_syncookies 
+   21  more /proc/sys/net/ipv4/tcp_syncookies 
+   22  echo 50000 > /proc/sys/net/core/somaxconn
+   23  echo 0 > /proc/sys/net/ipv4/tcp_syncookies
+   24  echo 1 > /proc/sys/net/ipv4/tcp_tw_recycle
+   25  echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse
+   26  --------------------- 
+   27  作者：p7+ 
+   28  来源：CSDN 
+   29  原文：https://blog.csdn.net/qq_30038111/article/details/79794377 
+   30  cat /proc/sys/net/ipv4/tcp_tw_recycle
+   31  ls
+   32  pwd
+   33  yum install git
+   34  yum install httpd-tools
+   35  ab -v
+   36  yum install -y git 
+   37  git clone https://github.com/brendangregg/wss.git
+   38  ls
+   39  cd wss/
+   40  ls
+   41  ./wss.pl 
+   42  ps aux
+   43  ./wss.pl 1192
+   44  ./wss.pl 1192 0.01
+   45  ./wss.pl -C 1192 
+   46  ./wss.pl -C 1192 1
+   47  yum install nginx
+   48  sudo amazon-linux-extras install nginx1.12
+   49  ./wss.pl -C 1192 1
+   50  yum install -y gcc
+   51  gcc wss-v1.c -o wss-v1
+   52  gcc wss-v2.c -o wss-v2
+   53  ls
+   54  ./wss-v1 1192 0.01
+   55  ./wss-v2 1192 0.01
+   56  watch ./wss-v1 1192 0.01
+   57  watch -d ./wss-v1 1192 0.01
+   58  ./wss-v2 1192 5
+   59  ./wss-v1 1192 5
+   60  yum install mysql -y
+   61  ps -ef | grep niginx
+   62  ps -ef | grep nginx
+   63  history
+   64  nginx
+   65  ps -ef | grep nginx
+   66  ab -kc 1000 -n 10000 http://localhost
+   67  ab -kc 1000 -n 10000 http://localhost:8080/
+   68  dmesg 
+   69  mount
+   70  ulimit -n
+   71  ulimit -n 20000
+   72  mysql -v
+   73  service mysqld start
+   74  service mysql start
+   75  mysql start
+   76  systemctl status mysqld.service
+   77  nginx -t
+   78  vi /etc/nginx/nginx.conf 
+   79  ab -kc 1000 -n 10000 http://localhost
+   80  ab -kc 1000 -n 10000 http://localhost:80/
+   81  ab -kc 1000 -n 10000 http://localhost:80/
+   82  ab -kc 1000 -n 10000 http://localhost:80/
+   83  history | grep ps
+   84   ps -ef | grep nginx
+   85   ps -aux | grep nginx
+   86  top
+   87  yum install htop
+   88  thop
+   89  htop
+   90  htop
+   91  cd wss
+   92  cd /usr/share/nginx/html/
+   93  ls
+   94  vi index.html 
+   95  wget http://blogs.longwin.com.tw/wordpress/true-color-earth-2015l.jpg
+   96  ls
+   97  mv true-color-earth-2015l.jpg earth-big.jpg
+   98  ls
+   99  vi index.html 
+  100  iostat
+  101  iftop
+  102  yum install iftop -y
+  103  yum install nload -y
+  104  yum install nethogs
+  105  ifstat 
+  106  ifstat 
+  107  wget http://blogs.longwin.com.tw/wordpress/true-color-earth-2015m.jpg
+  108  wget http://blogs.longwin.com.tw/wordpress/true-color-earth-2015m.jpg
+  109  wget http://blogs.longwin.com.tw/wordpress/true-color-earth-2015s.jpg
+  110  ls
+  111  mv true-color-earth-2015m.jpg earth-middle.jpg
+  112  mv true-color-earth-2015s.jpg earth-small.jpg
+  113  rm true-color-earth-2015m.jpg.1 
+  114  ls
+  115  echo 3 > /proc/sys/vm/drop_caches 
+  116  yum install mysqld 
+  117  yum install mysql
+  118  yum install mariadb mariadb-server
+  119  yum install mysql-server
+  120  systemctl start mariadb
+  121  mysql -u root -p
+  122  update mysql.user set password=PASSWORD('armlinux') where user='root';
+  123  update mysql.user set password=PASSWORD('armlinux') where user='root';
+  124  update mysql.user set password=armlinux where user='root';
+  125  mysql -u root
+  126  mysql -u root -p
+  127  git clone https://github.com/akopytov/sysbench.git
+  128  ls
+  129  mv ./sysbench /root/sysbench
+  130  cd 
+  131  pwd
+  132  ls
+  133  cd sysbench/
+  134  ls
+  135  yum -y install make automake libtool pkgconfig libaio-devel
+  136  yum -y install mariadb-devel openssl-devel
+  137  ls
+  138  ./autogen.sh 
+  139  ./configure 
+  140  make -j
+  141  make install
+  142  ls
+  143  ls
+  144  cd
+  145  /usr/local/bin/sysbench -v
+  146  /usr/local/bin/sysbench --HELP
+  147  /usr/local/bin/sysbench 
+  148  ll /usr/local/bin/sysbench
+  149  vi .bashrc 
+  150  ll
+  151  ll -l
+  152  ls -l
+  153  vi .bashrc 
+  154  vi /etc/bashrc
+  155  ls -l
+  156  history
+  157  ls
+  158  cd sysbench/
+  159  ls
+  160  cd tests/
+  161  ls
+  162  cd ..
+  163  cd tests/
+  164  ls
+  165  cd include/
+  166  ls
+  167  ps aux | grep mysql 
+  168  netstat -anp | grep mysql
+  169  cd ..
+  170  ls
+  171  cd t/
+  172  ls
+  173  mysql -u root -p
+  174  cd 
+  175  vi /etc/my.cnf
+  176  vi /etc/my.cnf.d/server.cnf 
+  177  vi /etc/my.cnf.d/client.cnf 
+  178  vi /etc/my.cnf.d/mysql-clients.cnf 
+  179  mysql -u root -p
+  180  mysql -u root -p
+  181  ls
+  182  vi /etc/my.cnf
+  183  cd /etc
+  184  ls
+  185  mv my.cnf my.cnf.bak
+  186  vi my.cnf
+  187  systemctl reatart mariadb
+  188  systemctl restart mariadb
+  189  systemctl restart mariadb.service
+  190  systemctl stop mariadb
+  191  systemctl start mariadb
+  192  systemctl status mariadb.service
+  193  systemctl status mariadb.service -l
+  194  vi /var/log/mariadb/mariadb.log
+  195  cd /var/lib/mysql/
+  196  ;s
+  197  ls
+  198  rm ./*
+  199  rm -f -r ./*
+  200  ll
+  201  systemctl start mariadb
+  202  ls
+  203  systemctl status mariadb.service -l
+  204  cd
+  205  yum uninstall mariadb
+  206  vi /var/log/mariadb/mariadb.log
+  207  cd /root
+  208  ls
+  209  cd sysbench/
+  210  ls
+  211  cd tests/
+  212  ls
+  213  cd include/
+  214  ls
+  215  vi inspect.lua 
+  216  /usr/local/bin/sysbench --help | more
+  217  /usr/local/bin/sysbench mysql help
+  218  cd ..
+  219  ls
+  220  cd ..
+  221  ls
+  222  /usr/local/bin/sysbench oltp help
+  223  /usr/local/bin/sysbench oltp_read_only help
+  224  ls
+  225  mysqlslap -user=root -password=armlinux -auto-genrtate-sql
+  226  mysqlslap --user=root --password=armlinux --auto-genrate-sql
+  227  mysqlslap --user=root --password=armlinux -auto-genrate-sql
+  228  mysqlslap --help
+  229  mysqlslap --user=root --password=armlinux -a
+  230  mysqlslap --user=root --password=armlinux --concurrency=100 --number-of-queries=1000 -a
+  231  /usr/local/bin/sysbench help
+  232  ls
+  233  cd src/lua/
+  234  ls
+  235  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=root --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  236  ps aux | grep mysql
+  237  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=root --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  238  nginx
+  239  cd wss/
+  240  ls
+  241  ./wss.pl 2669 0.5
+  242  ./wss.pl -C 2669 0.5
+  243  ./wss.pl -C 2669 0.5
+  244  ./wss.pl -C 2669 0.5
+  245  ./wss.pl -C 2669 0.5 
+  246  ls
+  247  ./wss.pl -C 2669 0.5 > earth-small-100w.txt
+  248  ls
+  249  ll
+  250  ll -h
+  251  pwd
+  252  ./wss.pl -C 2669 0.5 
+  253  ./wss.pl -C 2669 0.5
+  254  ./wss.pl -C 2669 0.5 > earth-small-1w.txt
+  255  ls
+  256  cat earth-small-1w.txt
+  257  ./wss.pl -C 2669 0.5 > index-100w.txt
+  258  ps -ef | grep mysql
+  259  ps -ef | grep mysql
+  260  ./wss.pl -C 4257 1
+  261  ./wss.pl -C 4094 1
+  262  df -h
+  263  systemctl restart mariadb
+  264  systemctl stop mariadb
+  265  systemctl start mariadb
+  266  ps -ef | grep mysql
+  267  ./wss.pl -C 12993 1
+  268  ./wss.pl -C 13000 1
+  269  find / -name oltp.lua
+  270  find / -name "oltp.lua"
+  271  /usr/local/bin/sysbench oltp_read_only.lua --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=root --mysql-password=armlinux --mysql-db=leodb --oltp-tables-count=10 --oltp-table-size=500000 --report-interval=10 --oltp-dist-type=uniform --rand-init=on --max-requests=0 --oltp-test-mode=nontrx --oltp-nontrx-mode=select --oltp-read-only=on --oltp-skip-trx=on --max-time=120 --num-threads=12 \ 
+  272  ./wss.pl -C 13000 1
+  273  ./wss.pl -C 12993 1
+  274  df -h
+  275  ls /
+  276  cd /var/
+  277  ls
+  278  cd lib
+  279  ls
+  280  cd mysql/
+  281  ls
+  282  mv /etc/my.cnf /etc/cnf.bak2
+  283  mv /etc/my.cnf.bak /etc/cnf
+  284  mv /etc/cnf /etc/my.cnf
+  285  systemctl start mariadb
+  286  ps -aux | grep mysql
+  287  mysql -u root -p
+  288  mysql -u root -p
+  289  mysql -u root
+  290  mysql -u root -p
+  291  mysql -u leo -p
+  292  cd /root/sysbench/src/lua/
+  293  ls
+  294  pwd
+  295  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=172.31.21.24 --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  296  mysqlslap -a -u leo -p armlinux
+  297  mysqlslap -a -c 100 -uleo -parmlinux
+  298  mysqlslap -a -c 200 -uleo -parmlinux
+  299  mysqlslap -a -i 20 -uleo -parmlinux
+  300  /usr/local/bin/sysbench --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=1 --table-size=100 oltp_read_write prepare
+  301  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=172.31.12.24 --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  302  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  303  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write cleanup
+  304  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  305  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write run
+  306  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write cleanup
+  307  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write prepare
+  308  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write run
+  309  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_write cleanup
+  310  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write prepare
+  311  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write run
+  312  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write cleanup
+  313  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write prepare
+  314  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write run
+  315  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_write cleanup
+  316  ls
+  317  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only prepare
+  318  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only run 
+  319  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only cleanup
+  320  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only prepare
+  321  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only run 
+  322  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_read_only cleanup
+  323  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_only prepare
+  324  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_only run
+  325  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_read_only cleanup
+  326  ls
+  327  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_write_only prepare
+  328  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_write_only run
+  329  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=100000 oltp_write_only cleanup
+  330  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_write_only prepare
+  331  /usr/local/bin/sysbench --db-driver=mysql --time=120 --threads=4 --report-interval=10 --mysql-host=localhost --mysql-port=3306 --mysql-user=leo --mysql-password=armlinux --mysql-db=leodb --tables=4 --table-size=1000000 oltp_write_only run
+  332  yum install -y zip
+  333  history
+  334  cd /root
+  335  ls
+  336  history > history-sysbench.txt
